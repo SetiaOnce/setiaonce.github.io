@@ -3,16 +3,6 @@ var _portfolio = function() {
         scrollTop: $("#sectionPortfolio").offset().top
     }, 1000); 
 }
-var _blogs = function() {
-    $('html, body').animate({
-        scrollTop: $("#sectionBlogs").offset().top
-    }, 1000); 
-}
-var _contact = function() {
-    $('html, body').animate({
-        scrollTop: $("#sectionContact").offset().top
-    }, 1000); 
-}
 
 const _siteInfo = () => {
     let headerLogo = `
@@ -41,10 +31,38 @@ const _headBanner = () => {
     </div>
     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-2 text-center">
         <div class="rounded text-center">
-            <img src="assets/img/my_foto.png" alt="" class="rounded-top w-350px" style="height: 400px;" />
+            <img src="assets/img/myfotoprofile.png" alt="" class="rounded-top w-350px" style="height: 350px;" />
         </div>
     </div>`)
 }
+const _contentPortfolio = () => {
+    $('#sectionPortfolio .card-title').html(`<h3 class="card-label fw-bolder text-primary">-- PORTFOLIO --</h3>`)
+    $('#sectionPortfolio .loader-portfolio').html(`<h3 class="card-label fw-bolder text-primary">-- PORTFOLIO --</h3>`)
+    $('#sectionPortfolio .loader-portfolio').hide(), $('#sectionPortfolio .list-portfolio').show()
+    // $('.image-popup').magnificPopup({
+    //     type: 'image', closeOnContentClick: true, closeBtnInside: false, fixedContentPos: true,
+    //     image: {
+    //         verticalFit: true
+    //     }
+    // });
+    $('#sectionPortfolio .list-portfolio').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Sedang memuat foto #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: false,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">Foto #%curr%</a> tidak dapat dimuat...',
+            titleSrc: function(item) {
+                return item.el.attr('title') + '<small>'+item.el.attr('subtitle')+'</small>';
+            }
+        }
+    });
+}
 setTimeout(function() {
-    _siteInfo(), _headBanner();
+    _siteInfo(), _headBanner(), _contentPortfolio();
 }, 1000);
