@@ -22,7 +22,7 @@ const _headBanner = () => {
                         <div class="sectionText">
                             <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0 me-3">Hallo Semua 👋, saya </h1>
                             <h1 style="font-family: Brush Script MT,cursive; font-size:60px; color:#4682A9;">Yoga Setiaonce</h1>
-                            <h1 class="text-gray-500 fs-1 d-block fw-bold">Seorang <span class="fw-bolder" style="color:#4682A9;">Developer</span> </h1>
+                            <h1 class="text-gray-500 fs-1 d-block fw-bold">Seorang <span class="fw-bolder" style="color:#4682A9;">Web Developer</span> </h1>
                         </div>
                     </div>
                 </div>

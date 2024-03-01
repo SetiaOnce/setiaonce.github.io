@@ -91,3 +91,18 @@
     right: -10px !important;
 }
 /*--end Custom--*/
+.contact-overstyle {
+    position: fixed;
+    left: 2rem;
+    bottom: 1rem;
+    transition: all 1s ease 0s;
+    animation: 1s ease 0s 1 normal none running fadeIn;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
+    transform: translateX(15px);
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
