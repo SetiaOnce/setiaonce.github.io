@@ -31,7 +31,7 @@ const _headBanner = () => {
     </div>
     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-2 text-center">
         <div class="rounded text-center">
-            <img src="assets/img/myfotoprofile.png" alt="" class="rounded-top w-350px" style="height: 350px;" />
+            <img src="assets/img/myfotoprofile.png" alt="" class="rounded-top w-250px" style="height: 350px;" />
         </div>
     </div>`)
 }
